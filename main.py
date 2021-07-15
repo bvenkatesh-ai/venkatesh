@@ -10,8 +10,15 @@ app.add_page("Home", home.app)
 app.add_page("NIRF Analytics",nirf.app)
 app.add_page("IIT Seat Prediction",iit.app)
 app.run()
-
-ft = model.CustomFooter()
-ft.add_text("Linkedin",h_link="https://www.linkedin.com/in/bvenkatesh-ai/")
-ft.add_text("Github",h_link="https://github.com/bvenkatesh-ai")
-ft.generate_footer()
+style = """
+    <style>
+      # MainMenu {visibility: hidden;}
+      footer {visibility: hidden;}
+     .stApp { bottom: 105px; }
+    </style>
+    """
+st.markdown(style, unsafe_allow_html=True)
+#ft = model.CustomFooter()
+#ft.add_text("Linkedin",h_link="https://www.linkedin.com/in/bvenkatesh-ai/")
+#ft.add_text("Github",h_link="https://github.com/bvenkatesh-ai")
+#ft.generate_footer()
