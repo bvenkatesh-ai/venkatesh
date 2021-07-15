@@ -3,5 +3,6 @@ pandas
 matplotlib
 xlrd
 fsspec
+htbuilder
 seaborn
 streamlit-aggrid
