@@ -6,3 +6,4 @@ fsspec
 htbuilder
 seaborn
 streamlit-aggrid
+XlsxWriter
