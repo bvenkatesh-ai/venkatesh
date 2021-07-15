@@ -1,7 +1,7 @@
 streamlit
 pandas
 matplotlib
-xlrd
+xlrd==1.2.0
 fsspec
 htbuilder
 seaborn
