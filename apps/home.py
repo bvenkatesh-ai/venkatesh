@@ -2,7 +2,7 @@ import streamlit as st
 import base64
 from io import BytesIO
 import os
-from streamlit_style.style import embed_html
+
 import streamlit.components.v1 as components
 
 def cv():
