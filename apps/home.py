@@ -15,4 +15,4 @@ def local_html(file_name):
         #st.markdown(f.read(), unsafe_allow_html=True)
         components.html(f"{f.read()}",height=800)
 def app():
-    local_html('skills.html')
+    local_html('skills2.html')
