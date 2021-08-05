@@ -3,7 +3,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis.css" type="text/css" />
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.16.1/vis-network.min.js"> </script>
 <center>
-<h1>My Data science tool kit</h1>
+<h1>My Data Science tool kit</h1>
 </center>
 
 <!-- <link rel="stylesheet" href="../node_modules/vis/dist/vis.min.css" type="text/css" />
@@ -20,11 +20,11 @@
             float: left;
         }
 
-        
 
-        
 
-        
+
+
+
 </style>
 
 </head>
@@ -38,16 +38,16 @@
     // initialize global variables.
     var edges;
     var nodes;
-    var network; 
+    var network;
     var container;
     var options, data;
 
-    
+
     // This method is responsible for drawing the graph, returns the drawn network
     function drawGraph() {
         var container = document.getElementById('mynetwork');
-        
-        
+
+
 
         // parsing and collecting nodes and edges from the python
         nodes = new vis.DataSet([{"borderWidth": 2, "borderWidthSelected": 3, "color": "blue", "font": {"color": "red"}, "id": "Programming", "label": "Programming", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "red", "font": {"color": "red"}, "id": "Database", "label": "Database", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "blue", "font": {"color": "red"}, "id": "Python", "label": "Python", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "blue", "font": {"color": "red"}, "id": "MATLAB", "label": "MATLAB", "labelHighlightBold": true, "shape": "dot", "size": 20}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "green", "font": {"color": "red"}, "id": "Data collection", "label": "Data collection", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "red", "font": {"color": "red"}, "id": "MySQL", "label": "MySQL", "labelHighlightBold": true, "shape": "dot", "size": 15}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "red", "font": {"color": "red"}, "id": "Sqlalchemy", "label": "Sqlalchemy", "labelHighlightBold": true, "shape": "dot", "size": 15}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "orange", "font": {"color": "red"}, "id": "Data analysis", "label": "Data analysis", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Beautifulsoup", "label": "Beautifulsoup", "labelHighlightBold": true, "shape": "dot", "size": 15}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Newspaper", "label": "Newspaper", "labelHighlightBold": true, "shape": "dot", "size": 15}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Pdfplumber", "label": "Pdfplumber", "labelHighlightBold": true, "shape": "dot", "size": 12}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Tabula", "label": "Tabula", "labelHighlightBold": true, "shape": "dot", "size": 20}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "blue", "font": {"color": "red"}, "id": "Data visualization", "label": "Data visualization", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "orange", "font": {"color": "red"}, "id": "Excel", "label": "Excel", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "orange", "font": {"color": "red"}, "id": "Numpy", "label": "Numpy", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "orange", "font": {"color": "red"}, "id": "Pandas", "label": "Pandas", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "red", "font": {"color": "red"}, "id": "Machine learning", "label": "Machine learning", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "blue", "font": {"color": "red"}, "id": "Matplotlib", "label": "Matplotlib", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "blue", "font": {"color": "red"}, "id": "Seaborn", "label": "Seaborn", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "green", "font": {"color": "red"}, "id": "Web framework", "label": "Web framework", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "red", "font": {"color": "red"}, "id": "Scikit-learn", "label": "Scikit-learn", "labelHighlightBold": true, "shape": "dot", "size": 20}, {"borderWidth": 2, "borderWidthSelected": 3, "color": "orange", "font": {"color": "red"}, "id": "Cloud", "label": "Cloud", "labelHighlightBold": true, "shape": "dot", "size": 40}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Streamlit", "label": "Streamlit", "labelHighlightBold": true, "shape": "dot", "size": 25}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "green", "font": {"color": "red"}, "id": "Flask", "label": "Flask", "labelHighlightBold": true, "shape": "dot", "size": 15}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "orange", "font": {"color": "red"}, "id": "AWS", "label": "AWS", "labelHighlightBold": true, "shape": "dot", "size": 14}, {"borderWidth": 1, "borderWidthSelected": 2, "color": "orange", "font": {"color": "red"}, "id": "IBM cloud", "label": "IBM cloud", "labelHighlightBold": true, "shape": "dot", "size": 10}]);
@@ -85,17 +85,17 @@
         }
     }
 };
-        
-        
 
-        
+
+
+
 
         network = new vis.Network(container, data, options);
-	 
-        
 
 
-        
+
+
+
 
         return network;
 
